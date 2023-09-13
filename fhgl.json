@@ -1,0 +1,7 @@
+{
+    "vslaunch": {
+        "all": {
+            "args": ["--release"]
+        }
+    }
+}

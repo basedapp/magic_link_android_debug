@@ -1,0 +1,38 @@
+{
+	"version": "1.0.0",
+	"configurations": [
+		{
+			"name": "Flutter",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "em Release",
+			"deviceId": "emulator-5554",
+			"type": "dart",
+			"request": "launch",
+			"os": "android",
+			"args": [
+				"--release"
+			]
+		},
+		{
+			"name": "em Debug",
+			"deviceId": "emulator-5554",
+			"type": "dart",
+			"request": "launch",
+			"os": "android",
+			"args": []
+		},
+		{
+			"name": "macOS (desktop)",
+			"deviceId": "macos",
+			"type": "dart",
+			"request": "launch",
+			"os": "darwin",
+			"args": [
+				"--release"
+			]
+		}
+	]
+}
