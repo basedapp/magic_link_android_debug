@@ -10,6 +10,8 @@ void main() async {
   print("KEY: $magicKey");
   Magic.instance = Magic.custom(
     magicKey,
+    // rpcUrl: 'https://polygon-rpc.com',
+    // chainId: 137,
     rpcUrl: 'https://rpc-mumbai.polygon.technology',
     chainId: 80001,
   );
