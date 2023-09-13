@@ -54,6 +54,10 @@ class _LoggedInScreenState extends State<LoggedInScreen> {
             Text("email: $email"),
             const SizedBox(height: 5,),
             Text("address: $address"),
+            const SizedBox(
+              height: 20,
+            ),
+            if (loading) const Center(child: CircularProgressIndicator()),
             
           ],
         ),
