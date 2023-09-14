@@ -7,7 +7,6 @@ void main() async {
   const keyStr = 'MAGIC_KEY';
   await dotenv.load(fileName: '.env');
   final magicKey = dotenv.env[keyStr]!;
-  print("KEY: $magicKey");
   Magic.instance = Magic.custom(
     magicKey,
     // rpcUrl: 'https://polygon-rpc.com',

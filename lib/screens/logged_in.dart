@@ -11,6 +11,7 @@ class LoggedInScreen extends StatefulWidget {
 class _LoggedInScreenState extends State<LoggedInScreen> {
   bool loading = true;
   bool isLoggedIn = false;
+  String error = "";
 
   String? email;
   String? address;
@@ -22,13 +23,17 @@ class _LoggedInScreenState extends State<LoggedInScreen> {
   }
 
   void init() async {
-    print("Logged In Check");
-    isLoggedIn = await Magic.instance.user.isLoggedIn();
-    print("isLogged check $isLoggedIn");
+    try {
+      print("Logged In Check");
+      isLoggedIn = await Magic.instance.user.isLoggedIn();
+      print("isLogged check $isLoggedIn");
 
-    final user = await Magic.instance.user.getMetadata();
-    email = user.email;
-    address = user.publicAddress;
+      final user = await Magic.instance.user.getMetadata();
+      email = user.email;
+      address = user.publicAddress;
+    } catch (e) {
+      error = e.toString();
+    }
 
     setState(() {
       loading = false;
@@ -54,6 +59,10 @@ class _LoggedInScreenState extends State<LoggedInScreen> {
             Text("email: $email"),
             const SizedBox(height: 5,),
             Text("address: $address"),
+            const SizedBox(
+              height: 5,
+            ),
+            Text("error: $error"),
             const SizedBox(
               height: 20,
             ),

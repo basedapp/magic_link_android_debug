@@ -25,6 +25,13 @@
 			"args": []
 		},
 		{
+			"name": "iOS Debug",
+			"deviceId": "F0D8BCAB-5257-4CAE-AA85-F22B40D4359F",
+			"type": "dart",
+			"request": "launch",
+			"args": []
+		},
+		{
 			"name": "macOS (desktop)",
 			"deviceId": "macos",
 			"type": "dart",
